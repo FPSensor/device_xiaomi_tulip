@@ -353,6 +353,9 @@ PRODUCT_PACKAGES += \
     libOmxVenc \
     libstagefrighthw
 
+# Overlays
+DEVICE_PACKAGE_OVERLAYS += $(DEVICE_PATH)/overlay
+
 # Remove unwanted packages
 PRODUCT_PACKAGES += \
     RemovePkgs
