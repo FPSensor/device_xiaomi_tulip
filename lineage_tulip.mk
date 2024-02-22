@@ -14,6 +14,9 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 # Inherit from tulip device
 $(call inherit-product, device/xiaomi/tulip/device.mk)
 
+# Exclude AudioFX
+TARGET_EXCLUDES_AUDIOFX := true
+
 # Device Info
 PRODUCT_NAME := lineage_tulip
 PRODUCT_DEVICE := tulip
