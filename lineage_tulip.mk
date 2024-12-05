@@ -11,6 +11,15 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit some common Lineage stuff
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    RISING_CHIPSET="sdm660" \
+    RISING_MAINTAINER="FPSensor"
+
+TARGET_PREBUILT_LAWNCHAIR_LAUNCHER := true
+WITH_GMS := true
+TARGET_CORE_GMS := true
+TARGET_CORE_GMS_EXTRAS := true
+
 # Inherit from tulip device
 $(call inherit-product, device/xiaomi/tulip/device.mk)
 
